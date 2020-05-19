@@ -1,241 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
 
-  <body>
-    <div class="container">
-      <div class="loading">
-        Loading...
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bitter&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class='container'>
+    <nav>
+      <div class="row head">
+        <div class='head-left'>
+          <p class="head-left__title">Jedź waść z <span class="head-left__yellow">"Źółtą</span>,
+            Chroń kumpli!
+            Gnęb syf!
+          </p>
+        </div>
+        <div class="head-right">
+          <p class="head-right__title">
+            <span class="head-right__yellow">start</span>
+            <span class="head-right__image"><img src="img/logo.png" alt="jezyk"> </span>
+            <span class="title__space">co i jak</span>
+          </p>
+        </div>
+      </div> <!-- row  head-->
+    </nav>
+    <main>
+
+      <div class='header'>
+        <section>
+          <h1 class='header-content'>Zachwyć się językiem polskim</h1>
+        </section>
       </div>
-      <div class="dataSet">
-        <div class="search__field">
-          <input
-            placeholder="Press enter to search"
-            class="searching"
-            id="search"
-            type="text"
-          />
+      <div class='about'>
+        <div class='grid grid-row'>
+          <div>
+            <section>
+              <h2 class='about-left__headline'>
+                <img src="img/strzalka-prawo.png" alt="strzalka Prawo">
+                <span class="about-left__right">PANGRAM</span></h2>
+              <p class="about-left__content">Krótkie zdanie poprawne gramtycznie i składniowo, w którym użyta jest
+                każda litera alfabetu przynajmniej raz.</p>
+            </section>
+          </div>
+          <div class='about-img'>
+            <img class="animate--image" src="img/krzyzyk.png" alt="">
+          </div>
+          <div>
+            <section>
+              <h2 class="about-right">
+                PALINDROM
+                <img class="about-right__left" src="img/strzalka-lewo.png" alt="strzalkaLewo">
+
+              </h2>
+              <p class="about-right__content">
+                Wyraz, zdanie lub wiersz brzmiący tak samo czytany od lewej do prawej i od prawej do lewej strony.
+              </p>
+            </section>
+          </div>
+        </div> <!-- grid -->
+        <div>
+          <p class='welcome'>Zapraszamy do konkursu</p>
         </div>
-        <div class="search__field">
-          <button id="clean">Show all</button>
-        </div>
-        <ul class="pagination">
-          <li>
-            <a>0</a>
-          </li>
-          <li>
-            <a>1</a>
-          </li>
-          <li>
-            <a>2</a>
-          </li>
-          <li>
-            <a>3</a>
-          </li>
-          <li>
-            <a>4</a>
-          </li>
-          <li>
-            <a>5</a>
-          </li>
-          <li>
-            <a>6</a>
-          </li>
-          <li>
-            <a>7</a>
-          </li>
-          <li>
-            <a>8</a>
-          </li>
-          <li>
-            <a>9</a>
-          </li>
-          <li>
-            <a>10</a>
-          </li>
-          <li>
-            <a>11</a>
-          </li>
-          <li>
-            <a>12</a>
-          </li>
-          <li>
-            <a>13</a>
-          </li>
-          <li>
-            <a>14</a>
-          </li>
-          <li>
-            <a>15</a>
-          </li>
-        </ul>
-        <div class="tab">
-          <table id="dataTable">
-            <tr class="main">
-              <th>ID</th>
-              <th>Name</th>
-              <th>City</th>
-              <th>Total income</th>
-              <th>Average income</th>
-              <th id="lastMonth">Last month income</th>
-            </tr>
-          </table>
+        <div class='grid grid-row'>
+          <div class="down-left">
+            <h3>Co i jak z tym konkursem?</h3>
+            <p>Zapraszamy do konkursu pozwającego odkryć piękno naszego języka. Dla
+              najlepszych "pangramistów" czekają atrakcyjne nagrody</p>
+            <h3>A to możesz wygrać:</h3>
+            <p><span class="title-yellow">Miejsce I</span> - wieczne pióro, książka, koszulka</p>
+            <p><span class="title-yellow">Miejsce II</span> - Tincidunt auctor a ornare odio.</p>
+            <p><span class="title-yellow">Miejsce III</span> - Sed non mauris vitae erat</p>
+            <a href="#">Zobacz nagrody</a>
+            <a href="#">Regulamin konkursu</a>
+
+          </div> <!-- down-left -->
+          <div></div> <!-- spacebetween-->
+          <div class="down-right">
+            <h3>Co zrobić, aby wziąć udział?</h3>
+            <ol>
+              <li>Polub nasz fanpage na fb</li>
+              <li>Wyślij propozycje palidromu</li>
+            </ol>
+            <span class='answer'>Dziękujemy za zgłoszenie! Sparawdź swoją skrzynkę pocztową. Życzymy powodzenia w
+              konkursie!</span>
+            <form id='send-palidrom' action="">
+              <input id='user-name' placeholder="Twoje imię i nazwisko" class='form-control' type="text">
+              <input id='user-email' placeholder="Twój adres e-mail" class='form-control' type="email">
+              <textarea id='user-palidrom' placeholder="Twój palidrom" rows="5" class="form-control form-area"
+                type="text"></textarea>
+              <button id='send' type='submit' class="btn-cta">Wyślij</button>
+            </form>
+            <div class="banners">
+              <img src="img/logo-domenypl.png" alt="">
+              <img src="img/logo-sorus.png" alt="">
+            </div>
+
+          </div> <!-- down-right -->
         </div>
       </div>
-    </div>
-  </body>
+
+    </main>
+  </div>
+</body>
+
 </html>
-<style>
-  table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-  }
-
-  td,
-  th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-  }
-  th {
-    cursor: pointer;
-  }
-
-  th:hover {
-    color: red;
-  }
-
-  html,
-  body {
-    margin: 0;
-    padding: 0;
-  }
-
-  h2 {
-    margin-top: 0 !important;
-  }
-
-  #crypto-table {
-    margin-top: 10%;
-  }
-
-  ul {
-    margin-top: 50px;
-  }
-
-  .active {
-    background-color: #ffa726 !important;
-  }
-
-  .bold {
-    font-weight: 600;
-  }
-
-  .active {
-    font-weight: bold;
-  }
-
-  .pagination {
-    display: flex;
-  }
-
-  .pagination li {
-    flex: 1 1 0;
-    width: 0;
-  }
-
-  .pagination li a {
-    padding: 0.2rem;
-    cursor: pointer;
-  }
-
-  ul {
-    list-style-type: none;
-  }
-
-  .dataSet {
-    display: none;
-  }
-
-  .loading {
-    display: flex;
-    margin-top: 300px;
-    justify-content: center;
-    font-size: 30px;
-    align-items: center;
-  }
-
-  .search__field {
-    display: flex;
-    place-content: center;
-  }
-
-  #search {
-    margin-top: 50px;
-    padding: 10px 20px;
-    width: 200px;
-    border: 1px solid #333;
-    text-align: center;
-  }
-
-  tr:hover {
-    background: #dfdfdf;
-  }
-
-  #clean {
-    padding: 0px;
-    width: 240px;
-  }
-
-  #clean {
-    padding: 0.5rem 1.5rem;
-    margin-top: 1rem;
-    border: none;
-    background: #333;
-    border: 1px solid #333;
-    color: white;
-  }
-
-  #clean:hover {
-    background: transparent;
-    color: black;
-    cursor: pointer;
-  }
-
-  .pagination {
-    padding: 0px;
-    margin: 10px 0px 0px 0px;
-    text-align: center;
-  }
-  .pagination li {
-    border: 1px solid #dddddd;
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-  .main:hover {
-    background-color: transparent !important;
-  }
-
-  .container {
-    margin: 0 auto;
-    max-width: 1200px;
-  }
-  table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-    border: 1px solid #ddd;
-  }
-  #lastMonth {
-    width: 100px;
-  }
-  .tab {
-    overflow-x: auto;
-  }
-</style>
