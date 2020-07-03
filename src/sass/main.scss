@@ -1,6 +1,60 @@
-@import "base/color.scss";
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
-@import "layout/grid.scss";
-@import "layout/body.scss";
+@import "components/animation";
+@import "components/photos";
+@import "components/slider";
+body {
+  margin: 0px;
+}
 
-@import "components/animation.scss";
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1900px;
+  margin: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 768px) {
+  .slider-items_item {
+    flex-basis: calc(33% - 30px);
+    max-width: calc(33% - 30px);
+  }
+  .lightbox-caption {
+    padding: 0px 5px;
+  }
+  .lightbox-content {
+    padding: 0px 5px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .slider-items_item {
+    flex-basis: calc(50% - 0px);
+    max-width: calc(50% - 10px);
+  }
+  div.prev {
+    left: 5px !important;
+  }
+  div.next {
+    right: 5px !important;
+  }
+  .overlay .fa {
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+    font-size: 15px;
+  }
+  .lightbox-caption {
+    padding: 0px 5px;
+  }
+  .lightbox-content {
+    padding: 0px 5px;
+  }
+}

@@ -1,0 +1,86 @@
+.lightbox.open {
+  display: flex;
+}
+.lightbox {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  cursor: zoom-out;
+  height: 100%;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  &-img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 500px;
+    padding: 40px 0px;
+    animation: showImage 0.5s ease;
+    cursor: zoom-in;
+  }
+  &-content {
+    position: relative;
+  }
+  &-caption {
+    color: #fff;
+    font-size: 18px;
+    position: absolute;
+    left: 0px;
+    bottom: 15px;
+    width: 100%;
+    z-index: -1;
+    display: flex;
+    justify-content: space-between;
+  }
+  &-close {
+    position: absolute;
+    z-index: 101;
+    right: 0;
+    height: 40px;
+    width: 40px;
+    top: 0;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    cursor: zoom-out;
+    font-size: 25px;
+  }
+  &-controls {
+    div {
+      position: absolute;
+      text-align: center;
+      line-height: 42px;
+      font-size: 35px;
+      font-weight: 400;
+      cursor: pointer;
+      top: 50%;
+      height: 40px;
+      width: 40px;
+      margin-top: -20px;
+      border-radius: 50%;
+      background: #ccc;
+      &:hover {
+        background: #fff;
+        transition: all 0.5s ease;
+      }
+    }
+    div.prev {
+      left: 21%;
+    }
+    div.next {
+      right: 21%;
+    }
+  }
+}
+.scale-up {
+  transform: scale(1.5);
+  transition: all 0.5s ease;
+}
+.scale-down {
+  transform: scale(1);
+  transition: all 0.5s ease-in-out;
+}
